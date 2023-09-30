@@ -44,7 +44,7 @@ ${username}
 </div>
 <div class="msgcont">    
 <div class="messagebox">  
-<img class="collar" src={img1}>
+<img class="collar" src=${fieldData.img1}>
 <div class="lefticoncont">
 <svg class="modtop" width="55.775311mm" height="106.05341mm" viewBox="0 0 55.775311 106.05341" version="1.1" id="svg5" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 <defs id="defs2"/>
@@ -330,9 +330,9 @@ ${message}
       if (msgLimit === true) {
    if (totalMessages > msgLimitAmount) {
      if (msgAlign === "bottom") {
-   $('.main-container').children().not(`.main-container div:nth-last-child(-n+{msgLimitAmount})`).fadeOut(500, function() { $(this).remove() });
+   $('.main-container').children().not(`.main-container div:nth-last-child(-n+${fieldData.msgLimitAmount})`).fadeOut(500, function() { $(this).remove() });
      } else {
-   $('.main-container').children().not(`.main-container div:nth-child(-n+{msgLimitAmount})`).fadeOut(500, function() { $(this).remove() });
+   $('.main-container').children().not(`.main-container div:nth-child(-n+${fieldData.msgLimitAmount})`).fadeOut(500, function() { $(this).remove() });
      }
     }
   }
